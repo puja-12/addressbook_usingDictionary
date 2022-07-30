@@ -73,7 +73,7 @@ class Addressbook:
 
             print("updated successfully :")
 
-    def RemoveContact(self):
+    def remove_contact(self):
         key = input("Enter key to check:")
         if key in self._people_dict:
             print("given name contact exists")
@@ -97,6 +97,6 @@ if __name__ == "__main__":
         elif option == 3:
             address_book.edit(contact1)
         elif option == 4:
-            address_book.RemoveContact()
+            address_book.remove_contact()
         else:
             print("Please choose correct option")
