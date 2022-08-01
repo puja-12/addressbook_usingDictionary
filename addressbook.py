@@ -40,39 +40,6 @@ class Addressbook:
         contact.phone = phone
         print("updated successfully")
 
-        # key = input("Enter key to check:")
-        # if key in self._people_dict:
-        #     update= self._people_dict.get()
-        #     print("given name contact exists")
-        #     print(
-        #         "choose the option to change the data : \n1) firstName\n2)lastName\n3)address\n4)Email\n5)Phone "
-        #         "Number")
-        #     choice = int(input())
-        #     if choice == 1:
-        #         print("Please enter the first name : ")
-        #         first_name = input()
-        #         update.first_name = first_name
-        #     elif choice == 2:
-        #         print("Please enter the last name : ")
-        #         last_name = input()
-        #         update.last_name = last_name
-        #     elif choice == 3:
-        #         print("Please enter the Address : ")
-        #         address = input()
-        #         update.address = address
-        #     elif choice == 4:
-        #         print("Please enter the email : ")
-        #         email = input()
-        #         update.email = email
-        #     elif choice == 5:
-        #         print("Please enter the Phone Number : ")
-        #         phone = input()
-        #         update.phone = phone
-        #     else:
-        #         print("please choose from above options :")
-        #
-        #     print("updated successfully :")
-
     def get_contact(self, first_name):
         return self._people_dict.get(first_name)
 
