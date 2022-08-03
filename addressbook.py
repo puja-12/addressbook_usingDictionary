@@ -22,27 +22,24 @@ class Addressbook:
     def __init__(self):
         self._people_dict = {}
 
-    """
-    method to create addressbook
-    """
-
     def add_contacts(self, contact_object):
+        """
+        method to read all values from addressbook
+        """
         self._people_dict.update({contact_object.first_name: contact_object})
 
-    """
-    method to read all values from addressbook
-    """
-
     def all_values(self):
+        """
+        method to read all values from addressbook
+        """
         # Iterate over all values of the dictionary
         for key, value in self._people_dict.items():
             print(key, value.details())
 
-    """
-    method to edit existing data in addressbook
-    """
-
     def edit(self, first_name, last_name, address, email, phone):
+        """
+          method to edit existing data in addressbook
+        """
         contact = self.get_contact(first_name)
         if not contact:
             print("key is not present")
@@ -74,10 +71,6 @@ class Addressbook:
 if __name__ == "__main__":
     address_book = Addressbook()
 
-    """
-    using dictionary mapping
-    """
-
 
     def choice1():
         print("Enter the First name :")
@@ -91,6 +84,7 @@ if __name__ == "__main__":
         print("Enter the Phone Number :")
         phone = input()
         contact1 = Contact(first_name, last_name, address, email, phone)
+
         address_book.add_contacts(contact1)
 
 
