@@ -16,7 +16,7 @@ class Contact:
 
 class Addressbook:
     """
-    creating a class in which we define functions for addressbook
+     class to  create a dictionary and using different method to perform CRUD operations.
     """
 
     def __init__(self):
@@ -25,13 +25,13 @@ class Addressbook:
 
     def add_contacts(self, contact_object):
         """
-        method to read all values from addressbook
+        function to add contacts in dictionary
         """
         self._people_dict.update({contact_object.first_name: contact_object})
 
     def all_values(self):
         """
-        method to read all values from addressbook
+        function to read all contacts from dictionary
         """
         # Iterate over all values of the dictionary
         for key, value in self._people_dict.items():
@@ -39,7 +39,7 @@ class Addressbook:
 
     def edit(self, first_name, last_name, address, email, phone):
         """
-          method to edit existing data in addressbook
+        function to edit existing contact in dictionary
         """
         contact = self.get_contact(first_name)
         if not contact:
@@ -55,11 +55,10 @@ class Addressbook:
     def get_contact(self, first_name):
         return self._people_dict.get(first_name)
 
-    """
-    method to remove contact from the addressbook
-    """
-
     def remove_contact(self, first_name):
+        """
+        function to remove contact from the dictionary
+        """
         contact = self.get_contact(first_name)
         if not contact:
             print("given name not exists")
@@ -83,7 +82,7 @@ if __name__ == "__main__":
         print("Enter the Email :")
         email = input()
         print("Enter the Phone Number :")
-        phone = input()
+        phone = int(input())
         contact1 = Contact(first_name, last_name, address, email, phone)
 
         address_book.add_contacts(contact1)
@@ -103,7 +102,7 @@ if __name__ == "__main__":
         print("Please enter the email : ")
         email = input()
         print("Please enter the Phone Number : ")
-        phone = input()
+        phone = int(input())
         address_book.edit(key, last_name, address, email, phone)
 
 
@@ -140,5 +139,3 @@ if __name__ == "__main__":
 
         else:
             default()
-
-
