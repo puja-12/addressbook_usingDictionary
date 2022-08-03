@@ -1,8 +1,8 @@
 class Contact:
 
-    def __init__(self, f_name, l_name, address, email, phone_number):
-        self.first_name = f_name
-        self.last_name = l_name
+    def __init__(self, first_name, last_name, address, email, phone_number):
+        self.first_name = first_name
+        self.last_name = last_name
         self.address = address
         self.email = email
         self.phone = phone_number
@@ -20,6 +20,7 @@ class Addressbook:
     """
 
     def __init__(self):
+
         self._people_dict = {}
 
     def add_contacts(self, contact_object):
@@ -139,3 +140,5 @@ if __name__ == "__main__":
 
         else:
             default()
+
+
